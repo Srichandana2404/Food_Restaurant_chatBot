@@ -1,0 +1,6 @@
+pip install uvicorn
+pip install fastapi
+pip install mysql-connector-python
+ngrok: https://ngrok.com/download/windows
+Dialogflow: https://dialogflow.cloud.google.com/
+MySQL WorkBench: https://dev.mysql.com/downloads/workbench/
