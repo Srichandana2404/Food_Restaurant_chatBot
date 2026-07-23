@@ -1,0 +1,77 @@
+## 🔧 Tech Stack
+- **Dialogflow** — Intent recognition & conversation management
+- **FastAPI** — Python backend, webhook fulfillment
+- **MySQL** — Order & inventory management
+- **ngrok** — Local tunneling for webhook testing
+- **Dialogflow Messenger** — Chat widget embedded on the website
+
+## 💬 Features
+- Dynamic menu display with live prices, pulled from the database
+- Multi-item order placement with natural language quantity parsing (e.g., "2 pizzas and one mango lassi")
+- Order tracking by order ID
+- Itemized order summary with per-item pricing and total on checkout
+- Store hours lookup
+- Friendly, natural conversation closing ("thank you", "bye", etc.)
+- Session-based in-progress order tracking, reset cleanly on new orders
+
+## 🗂️ Project Structure
+
+food-order-chatbot/
+├── main.py # FastAPI app, webhook routing, intent handlers
+├── db_helper.py # MySQL connection & queries
+├── generic_helper.py # Session ID extraction, formatting helpers
+├── requirements.txt
+├── database/
+│ └── schema.sql # Table structures + stored procedure
+├── website/
+│ └── index.html # Restaurant page with chatbot embedded
+└── README.md
+
+
+## ⚙️ How to Run Locally
+
+1. **Clone the repo**
+```bash
+   git clone <repo-url>
+   cd food-order-chatbot
+```
+
+2. **Install dependencies**
+```bash
+   requirements.txt
+```
+
+3. **Set up the database**
+   - Create a MySQL database
+   - Run `database/schema.sql` to create tables and the stored procedure
+   - Update your MySQL credentials in `db_helper.py` (or via environment variables)
+
+4. **Run the FastAPI server**
+```bash
+   uvicorn main:app --reload
+```
+
+5. **Expose it publicly with ngrok**
+```bash
+   ngrok http 8000
+```
+
+6. **Connect to Dialogflow**
+   - Set the ngrok HTTPS URL as your Fulfillment webhook in Dialogflow
+   - Import intents/entities into your own Dialogflow agent (or recreate them following the Codebasics tutorial)
+
+7. **Embed the chatbot**
+   - Add the Dialogflow Messenger script to your website's HTML (see `website/index.html`)
+
+## 🧠 What I Learned
+- Debugging silent failures caused by stale processes holding onto a port
+- Managing database connection lifecycles correctly in a stateless webhook environment
+- Session-based state management for multi-turn conversations
+- Matching parameter/intent names precisely between Dialogflow and backend code
+- Deploying a local dev backend for external webhook access via ngrok
+
+## 🙏 Credits
+Built following the [Codebasics NLP Tutorial Series](https://www.youtube.com/@codebasics) by Dhaval Patel, then extended with custom features (dynamic menu, itemized checkout, friendly closing responses, and more).
+
+## 📌 Note
+This is a demo/portfolio project. Sample menu items and prices are for demonstration purposes.
