@@ -1,0 +1,468 @@
+#For a basic Restaurant Website creation
+1. An index.html file with all html code
+2. A style.css file with all css code
+3. A Folder (images) for all the items/dishes images in .jpg format
+#index.html code
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pandeyji Eater</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+<body>
+
+<nav>
+    <div class="logo">🍽 Pandeyji Eater</div>
+
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#location">Location</a></li>
+    </ul>
+</nav>
+
+
+<section class="hero" id="home">
+
+<div class="overlay">
+
+<h1>Pandeyji Eater</h1>
+
+<p>
+Authentic Indian Street Food
+made with love and served fresh every day.
+</p>
+
+<div class="buttons">
+
+<a href="#menu" class="btn">View Menu</a>
+
+<a href="#" class="btn secondary">Order Now</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<section class="about" id="about">
+
+<h2>About Us</h2>
+
+<p>
+
+Welcome to <strong>Pandeyji Eater</strong>, your favorite destination for delicious Indian street food in <strong>Gajuwaka, Visakhapatnam</strong>. We prepare every dish using fresh ingredients, authentic recipes, and a passion for serving unforgettable flavors.
+
+</p>
+
+</section>
+
+
+
+
+<section class="menu" id="menu">
+
+<h2>Our Menu</h2>
+
+<div class="menu-grid">
+
+
+<div class="card">
+<img src="images/pav-bhaji.jpg">
+<h3>Pav Bhaji</h3>
+<p>Spicy mashed vegetables served with buttery pav for Rs.80.</p>
+<button>Order Now</button>
+</div>
+
+<div class="card">
+<img src="images/chole-bhature.jpg">
+<h3>Chole Bhature</h3>
+<p>Punjabi-style chole served with fluffy bhature for Rs.100.</p>
+<button>Order Now</button>
+</div>
+
+<div class="card">
+<img src="images/pizza.jpg">
+<h3>Pizza</h3>
+<p>Loaded with cheese and delicious toppings for Rs.200.</p>
+<button>Order Now</button>
+</div>
+
+<div class="card">
+<img src="images/mango-lassi.jpg">
+<h3>Mango Lassi</h3>
+<p>Refreshing chilled mango yogurt drink for Rs.80.</p>
+<button>Order Now</button>
+</div>
+
+<div class="card">
+<img src="images/masala-dosa.jpg">
+<h3>Masala Dosa</h3>
+<p>Crispy dosa stuffed with flavorful potato masala for Rs.70.</p>
+<button>Order Now</button>
+</div>
+
+<div class="card">
+<img src="images/biryani.jpg">
+<h3>Biryani</h3>
+<p>Fragrant basmati rice with aromatic spices for Rs.120.</p>
+<button>Order Now</button>
+</div>
+
+<div class="card">
+<img src="images/vada-pav.jpg">
+<h3>Vada Pav</h3>
+<p>Mumbai's famous spicy potato burger for Rs.95.</p>
+<button>Order Now</button>
+</div>
+
+<div class="card">
+<img src="images/rava-dosa.jpg">
+<h3>Rava Dosa</h3>
+<p>Crispy semolina dosa served with chutney for Rs.60.</p>
+<button>Order Now</button>
+</div>
+
+<div class="card">
+<img src="images/samosa.jpg">
+<h3>Samosa</h3>
+<p>Golden crispy snack filled with spicy potatoes for Rs.30.</p>
+<button>Order Now</button>
+</div>
+
+</div>
+
+</section>
+
+
+
+<section class="features">
+
+<h2>Why Choose Us?</h2>
+
+<div class="feature-box">
+
+<div>
+<i class="fa-solid fa-seedling"></i>
+<h3>Fresh Ingredients</h3>
+</div>
+
+<div>
+<i class="fa-solid fa-fire"></i>
+<h3>Authentic Taste</h3>
+</div>
+
+<div>
+<i class="fa-solid fa-motorcycle"></i>
+<h3>Fast Delivery</h3>
+</div>
+
+<div>
+<i class="fa-solid fa-wallet"></i>
+<h3>Affordable Prices</h3>
+</div>
+
+</div>
+
+</section>
+
+
+
+<section class="location" id="location">
+
+<h2>Visit Us</h2>
+
+<p>📍 Gajuwaka, Visakhapatnam</p>
+
+<iframe
+src="https://maps.google.com/maps?q=Gajuwaka,%20Visakhapatnam&t=&z=13&ie=UTF8&iwloc=&output=embed">
+</iframe>
+
+</section>
+
+
+
+<footer>
+
+<h3>Pandeyji Eater</h3>
+
+<p>📍 Gajuwaka, Visakhapatnam</p>
+
+<p>Open Daily • 10 AM - 10 PM</p>
+
+<div class="social">
+
+<i class="fab fa-facebook"></i>
+<i class="fab fa-instagram"></i>
+<i class="fab fa-whatsapp"></i>
+
+</div>
+
+<p>© 2026 Pandeyji Eater</p>
+
+</footer>
+<script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1">
+    </script>
+    <df-messenger
+      intent="WELCOME"
+      chat-title="Pari-chatbot"
+      agent-id="c4a0fb15-16bf-44b3-a945-9258d9be1624"
+      language-code="en"
+    ></df-messenger>
+
+    <style>
+      df-messenger {
+        z-index: 999;
+        position: fixed;
+        bottom: 16px;
+        right: 16px;
+      }
+    </style>
+</body>
+</html>
+
+
+#style.css code
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#f7efe4;
+color:#3d2b1f;
+}
+
+nav{
+position:fixed;
+width:100%;
+padding:18px 8%;
+background:rgba(255,248,240,.92);
+backdrop-filter:blur(12px);
+display:flex;
+justify-content:space-between;
+align-items:center;
+z-index:1000;
+box-shadow:0 4px 20px rgba(0,0,0,.08);
+}
+
+.logo{
+font-size:28px;
+font-weight:700;
+color:#8b4513;
+}
+
+nav ul{
+display:flex;
+gap:35px;
+list-style:none;
+}
+
+nav a{
+text-decoration:none;
+color:#5a3d2b;
+font-weight:500;
+transition:.3s;
+}
+
+nav a:hover{
+color:#d2691e;
+}
+
+.hero{
+height:100vh;
+background:url(images/hero.jpg) center/cover;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+}
+
+.overlay{
+background:rgba(255,248,240,.72);
+padding:60px;
+border-radius:25px;
+backdrop-filter:blur(6px);
+}
+
+.hero h1{
+font-size:64px;
+color:#8b4513;
+}
+
+.hero p{
+margin:20px 0;
+font-size:20px;
+max-width:650px;
+}
+
+.buttons{
+display:flex;
+justify-content:center;
+gap:20px;
+}
+
+.btn{
+background:#d2691e;
+color:white;
+padding:14px 30px;
+border-radius:50px;
+text-decoration:none;
+transition:.3s;
+}
+
+.secondary{
+background:#8b4513;
+}
+
+.btn:hover{
+transform:translateY(-4px);
+}
+
+section{
+padding:90px 10%;
+}
+
+h2{
+text-align:center;
+font-size:40px;
+margin-bottom:45px;
+color:#8b4513;
+}
+
+.about p{
+max-width:900px;
+margin:auto;
+text-align:center;
+line-height:1.9;
+font-size:18px;
+}
+
+.menu-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+}
+
+.card{
+background:#fffaf4;
+border-radius:18px;
+overflow:hidden;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+transition:.4s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.card img{
+width:100%;
+height:220px;
+object-fit:cover;
+}
+
+.card h3{
+padding:18px;
+color:#8b4513;
+}
+
+.card p{
+padding:0 18px 18px;
+color:#555;
+}
+
+.card button{
+margin:18px;
+padding:12px 25px;
+border:none;
+background:#d2691e;
+color:white;
+border-radius:40px;
+cursor:pointer;
+transition:.3s;
+}
+
+.card button:hover{
+background:#8b4513;
+}
+
+.features{
+background:#efe1cf;
+}
+
+.feature-box{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:30px;
+text-align:center;
+}
+
+.feature-box div{
+background:white;
+padding:35px;
+border-radius:18px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+transition:.3s;
+}
+
+.feature-box div:hover{
+transform:scale(1.05);
+}
+
+.feature-box i{
+font-size:45px;
+color:#d2691e;
+margin-bottom:15px;
+}
+
+.location iframe{
+width:100%;
+height:420px;
+border:none;
+border-radius:18px;
+margin-top:25px;
+}
+
+.location p{
+text-align:center;
+font-size:20px;
+}
+
+footer{
+background:#8b4513;
+color:white;
+text-align:center;
+padding:45px;
+}
+
+.social{
+margin:25px 0;
+}
+
+.social i{
+font-size:30px;
+margin:0 15px;
+cursor:pointer;
+transition:.3s;
+}
+
+.social i:hover{
+color:#ffd59e;
+}
